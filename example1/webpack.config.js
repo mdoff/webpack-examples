@@ -11,4 +11,4 @@ module.exports = {
             loaders: ['style', 'css']
         }]
     }
-}
+};
