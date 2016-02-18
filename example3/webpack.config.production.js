@@ -5,11 +5,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    devtool: 'eval',
-    devServer: { hot: true },
     entry: ['./src/index.jsx'],
     output: {
-        path: __dirname + '/dist',
+        path: __dirname + '/deploy',
         filename: './bundle.js'
     },
     module: {
@@ -27,8 +25,7 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin('styles.css'),
         new HtmlWebpackPlugin({
-            template: './src/index.html'
-        }),
-        new webpack.HotModuleReplacementPlugin()
+                template: './src/index.html'
+            })
     ]
 };

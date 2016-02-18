@@ -1,5 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Print from './print.jsx';
+import './css/style.css';
 
-ReactDOM.render(<Print />, document.getElementsByClassName('application')[0]);
+class Index extends React.Component {
+  render() {
+    return (
+      <div>
+        <Print/> 
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Index />, document.getElementsByClassName('application')[0]);
